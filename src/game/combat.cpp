@@ -18,6 +18,10 @@ void Combat::handleEvent(const SDL_Event& e) {
 
 void Combat::update(int delta) {
 	// Update shit here
+
+    // Vec2<float> test(1, -1);
+    // Vec2<float> test2 = test.normalized();
+
 }
 
 void Combat::render() {
