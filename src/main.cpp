@@ -1,9 +1,17 @@
+#ifdef _DEBUG
 #define SDL_MAIN_HANDLED
+#endif
 
 #include <iostream>
 
 #include "engine/core.hpp"
+#include "game/menus/menu.hpp"
 #include "game/combat.hpp"
+
+#include "engine/mixer.hpp"
+#include "game/combat.hpp"
+#include "game/customization.hpp"
+#include "game/skillTree.hpp"
 
 int main(int argc, char* argv[]) {
 
@@ -13,7 +21,13 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	Combat * state = new Combat();
+	Core::setDebugMode(true);
+
+	// Combat * state = new Combat("res/data/levels/level1.json");
+	// Combat * state = new Combat();
+	// Customization * state = new Customization();
+	// SkillTree * state = new SkillTree();
+	Menu * state = new Menu();
 	Core::setState(state);
 
 	// Main engine loop
